@@ -1,0 +1,4 @@
+version aanpassen: in __version__.py
+build: python3 setup.py sdist bdist_wheel
+install-local: pip install ./dist/ziggonext-0.13.3.tar.gz --force-reinstall
+upload: python3 -m twine upload dist/ziggonext-0.13.3.tar.gz
