@@ -1,4 +1,4 @@
-"""Python client for Ziggo Next."""
+"""Python client for Arrix DCX960."""
 class ArrixDCX960ConnectionError(Exception):
     pass
 
