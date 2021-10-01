@@ -238,7 +238,7 @@ class ArrisDCX960:
         _logger.debug(f'mqtt message received on topic "{message.topic}": {str(jsonPayload)}')
         if "source" in jsonPayload:
             deviceId = jsonPayload["source"]
-            if "deviceType" in jsonPayload and jsonPayload["deviceType"] == "STB" and "state" in jsonPayload and jsonPayload["state"] != "OFFLINE":
+            if "deviceType" in jsonPayload and jsonPayload["deviceType"] == "STB" and "state" in jsonPayload and jsonPayload["state"] <> "OFFLINE":
                 self.settop_boxes[deviceId].update_settopbox_state(jsonPayload)
             if "status" in jsonPayload:
                 self.settop_boxes[deviceId].update_settop_box(jsonPayload)
